@@ -1,0 +1,165 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Pienso para gatos",
+        "categoria": "Alimentación",
+        "precio": 15.99,
+        "stock": 50,
+        "img": "https://images.ecestaticos.com/GQrt6vyZeFyI1Q1ydJhNYvMVYiY=/9x69:1000x712/1440x810/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F889%2F9a8%2F146%2F8899a8146c33d5aabdedb08a991e5db4.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Correa para perros",
+        "categoria": "Accesorios",
+        "precio": 8.75,
+        "stock": 30,
+        "img":"https://i0.wp.com/cat-oh.com/wp-content/uploads/2022/02/FLEXI-CUERDA-AZUL.jpg?fit=950%2C950&ssl=1"
+      },
+      {
+        "id": 3,
+        "nombre": "Shampoo para perros",
+        "categoria": "Higiene",
+        "precio": 12.49,
+        "stock": 20,
+        "img":"https://dojiw2m9tvv09.cloudfront.net/43562/product/sinpul-shampoo45698596.jpg"
+      },
+      {
+        "id": 4,
+        "nombre": "Antipulgas y garrapatas",
+        "categoria": "Salud",
+        "precio": 22.99,
+        "stock": 15,
+        "img":"https://falabella.scene7.com/is/image/FalabellaPE/gsc_121452454_3044460_1?wid=800&hei=800&qlt=70"
+      },
+      {
+        "id": 5,
+        "nombre": "Juguete para gatos",
+        "categoria": "Entretenimiento",
+        "precio": 5.99,
+        "stock": 40,
+        "img":"https://m.media-amazon.com/images/I/71T0gi2LuKL._AC_UF1000,1000_QL80_.jpg"
+      },
+      {
+        "id": 6,
+        "nombre": "Camita para perros",
+        "categoria": "Descanso",
+        "precio": 28.99,
+        "stock": 10,
+        "img":"https://ripleype.imgix.net/https%3A%2F%2Fdpq25p1ucac70.cloudfront.net%2Fseller-place-files%2Fmrkl-files%2F140%2FMARKETPLACE%20INTERNACIONAL%2F71202g4ayUS_194434127581_31.jpeg?w=750&h=555&ch=Width&auto=format&cs=strip&bg=FFFFFF&q=60&trimcolor=FFFFFF&trim=color&fit=fillmax&ixlib=js-1.1.0&s=684de20b153b95a4b34199a178846646"
+      },
+      {
+        "id": 7,
+        "nombre": "Comedero automático",
+        "categoria": "Accesorios",
+        "precio": 19.99,
+        "stock": 25,
+        "img":"https://plazavea.vteximg.com.br/arquivos/ids/26963543-512-512/WhatsApp-Image-2023-05-29-at-20.57.08.jpg"
+      },
+      {
+        "id": 8,
+        "nombre": "Cepillo para gatos",
+        "categoria": "Higiene",
+        "precio": 6.49,
+        "stock": 35,
+        "img":"https://www.miau.pe/cdn/shop/products/tienda_003600_7967a71fdd161452518f537a2ae7213793852818_producto_large_90_1024x1024.jpg?v=1644794515"
+      },
+      {
+        "id": 9,
+        "nombre": "Suplemento vitamínico",
+        "categoria": "Salud",
+        "precio": 17.25,
+        "stock": 12,
+        "img":"https://oechsle.vteximg.com.br/arquivos/ids/15582608-1000-1000/image-af0b111ed2f9416fb9eb60c45ea87f0d.jpg?v=638254819509930000"
+      },
+      {
+        "id": 10,
+        "nombre": "Pelota masticable para perros",
+        "categoria": "Entretenimiento",
+        "precio": 4.99,
+        "stock": 50,
+        "img":"https://m.media-amazon.com/images/I/61cvl5ymEFL.jpg"
+      },
+      {
+        "id": 11,
+        "nombre": "Caseta para gatos",
+        "categoria": "Descanso",
+        "precio": 34.99,
+        "stock": 8,
+        "img":"https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/8435677827544_1.jpg"
+      },
+      {
+        "id": 12,
+        "nombre": "Arnés para conejos",
+        "categoria": "Accesorios",
+        "precio": 9.99,
+        "stock": 18,
+        "img":"https://oechsle.vteximg.com.br/arquivos/ids/11315773-1000-1000/imageUrl_2.jpg?v=637986571068400000"
+      },
+      {
+        "id": 13,
+        "nombre": "Cepillo de dientes para perros",
+        "categoria": "Higiene",
+        "precio": 7.99,
+        "stock": 30,
+        "img":"https://ss345.liverpool.com.mx/xl/1054580351.jpg"
+      },
+      {
+        "id": 14,
+        "nombre": "Suplemento para articulaciones",
+        "categoria": "Salud",
+        "precio": 23.75,
+        "stock": 15,
+        "img":"https://www.petco.com.mx/medias/106712.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MjI5NjAzfGltYWdlL2pwZWd8aDE2L2hjMi85NzI5NDk5NTI5MjQ2LzEwNjcxMi5qcGdfMTIwMGZ0d3wxYjlmZDQ2MTcwNDAwYWM0MTI3N2JkY2M2MDVmYzEzNGNmODU1OWE5M2UyZjNmZDYxMGNhNDUxNDQ4YzRkYTBm"
+      },
+      {
+        "id": 15,
+        "nombre": "Rascador para gatos",
+        "categoria": "Entretenimiento",
+        "precio": 16.49,
+        "stock": 20,
+        "img":"https://petshopdelivery.pe/4379-large_default/rascador-gigante-y-mega-gimnasio-premium-para-gatos-106-x-56-x-213-cm.jpg"
+      },
+      {
+        "id": 16,
+        "nombre": "Comida especial para cachorros",
+        "categoria": "Alimentación",
+        "precio": 18.99,
+        "stock": 25,
+        "img":"https://oechsle.vteximg.com.br/arquivos/ids/1210949-1000-1000/image-b67367a7621b407ba24dc4d9c2c2c6d1.jpg?v=637494289530370000"
+      },
+      {
+        "id": 17,
+        "nombre": "Collar antipulgas",
+        "categoria": "Higiene",
+        "precio": 11.99,
+        "stock": 40,
+        "img":"https://promart.vteximg.com.br/arquivos/ids/6796978-1000-1000/image-fd1cb5efe7a04e9eb9b84dc41b862eec.jpg?v=638132238074670000"
+      },
+      {
+        "id": 18,
+        "nombre": "Cama ortopédica para perros mayores",
+        "categoria": "Descanso",
+        "precio": 42.99,
+        "stock": 10,
+        "img":"https://www.knuffelwuff.es/media/image/product/8384/lg/cama-ortopedica-para-perros-knuffelwuff-yukon-de-terciopelo-cosida-a-mano.jpg"
+      },
+      {
+        "id": 19,
+        "nombre": "Juguete interactivo para roedores",
+        "categoria": "Entretenimiento",
+        "precio": 9.25,
+        "stock": 30,
+        "img":"https://i.ebayimg.com/thumbs/images/g/JDUAAOSwcPhkDFK-/s-l640.jpg"
+      },
+      {
+        "id": 20,
+        "nombre": "Bandeja sanitaria para gatos",
+        "categoria": "Higiene",
+        "precio": 14.49,
+        "stock": 15,
+        "img":"https://falabella.scene7.com/is/image/FalabellaPE/gsc_123215056_3614422_1?wid=800&hei=800&qlt=70"
+      }
+    ]
+  }
+  

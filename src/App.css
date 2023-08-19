@@ -3,6 +3,8 @@
  margin: 0;
 }
 
+
+
 .App {
   text-align: center;
 }
@@ -40,4 +42,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body, .App, #root {
+  height: 100vh;
 }

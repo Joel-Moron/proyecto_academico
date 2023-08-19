@@ -15,16 +15,14 @@ import Componente from './component/componente';
 
 function App() {
   return (
-    <>
     <div className="App">
       <Nav/>
       <Routes>
         <Route path='/' element={<Inicio/>}/>
         <Route path='componente' element={<Componente/>}/>
       </Routes>
+      <Asistente/>
     </div>
-    <Asistente/>
-    </>
   );
 }
 

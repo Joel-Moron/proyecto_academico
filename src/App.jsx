@@ -21,6 +21,7 @@ function App() {
         <Route path='/' element={<Inicio/>}/>
         <Route path='componente' element={<Componente/>}/>
       </Routes>
+      <Componente/>
       <Asistente/>
     </div>
   );

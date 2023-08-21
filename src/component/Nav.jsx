@@ -1,15 +1,20 @@
 
-import { Button } from 'primereact/button';
-import { InputText } from 'primereact/inputtext';
         
-const Nav = () => {
+const Nav = ({user, setUser}) => {
+
+    const cerrar = () =>{
+        setUser(null)
+    } 
+
+
     return(
         <>
             <header>
                 <div class="inner">
-                    <h1 class="logo"><a href="index.html">Pet clinic</a></h1>
+                    
                     <div class="fright">
-                    <div class="header-meta">
+                    <div class="header-meta flex justify-content-around">
+                    <h1><a href="index.html">Bonitos y Gorditos</a></h1>
                         <form action="#" id="search-form" method="post">
                         <input type="text" onBlur="if(this.value==''){this.value='search'}" onFocus="if(this.value=='search'){this.value=''}" value="search" name="search"/>
                         <a class="search-form-submit"></a>
@@ -20,11 +25,17 @@ const Nav = () => {
                     <nav className='flex w-auto'>
                         <ul class="sf-menu flex">
                         <li><a href="/">main</a></li>
-                        <li><a href="about">about</a></li>
-                        <li> <a href="services">services</a></li>
-                        <li><a href="productos">productos</a></li>
-                        <li><a href="inicio-sesion">iniciar sesión</a></li>
-                        <li><a href="registro">registrarse</a></li>
+                        <li><a href="/about">about</a></li>
+                        <li> <a href="/services">services</a></li>
+                        <li><a href="/productos">productos</a></li>
+                        {user !== null? 
+                        <><li onClick={()=>cerrar()}><a href="/">cerrar sesion</a></li>
+                        <li><a href="/">citas</a></li>
+                        </> 
+                        : 
+                        <><li><a href="/inicio-sesion">iniciar sesión</a></li>
+                        <li><a href="/registro">registrarse</a></li></> }
+                        
                         </ul>
                     </nav>
                     </div>

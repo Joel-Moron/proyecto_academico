@@ -2,7 +2,7 @@ const componente = () =>{
     return(
         <>
             <footer>
-                <div class="copyright"> &copy; 2012 <strong class="footer-logo">Pet clinic</strong>
+                <div class="copyright"> &copy; 2023 <strong >Bonitos y Gorditos</strong>
                     <div>Website Template by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></div>
                 </div>
                 <ul class="social-list">

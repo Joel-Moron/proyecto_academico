@@ -1,23 +1,49 @@
 
 import React, { useState } from 'react';
 import '../css/registro.css'
+import { useNavigate } from 'react-router-dom';
 const Registro = () =>{
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
     const [contrasena, setContrasena] = useState('');
     const [apellidoPaterno, setApellidoPaterno] = useState('');
     const [apellidoMaterno, setApellidoMaterno] = useState('');
-  
+    const [dni, setDni] = useState('');
+    const navigate = useNavigate();
+
     const handleSubmit = (e) => {
       e.preventDefault();
       let data = {
         nombre : nombre,
         email : email,
-        contrasena : contrasena,
+        password : contrasena,
         app : apellidoPaterno,
-        apM : apellidoMaterno
+        apm : apellidoMaterno
       }
+      
+      console.log(JSON.stringify(data))
+
+      fetch('http://127.0.0.1:8000/api/login',{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(responseData => {
+        console.log(responseData)
+        navigate('/inicio-sesion');
+
+      })
+      .catch(error => console.error('Error fetching data:', error));
+
     };
+
+
+
+
+    
     return (
         <div className="registro-usuario">
       <h2>Registro de Usuario</h2>
@@ -57,8 +83,8 @@ const Registro = () =>{
           <input
             type="number"
             id="DNI"
-            value={apellidoMaterno}
-            onChange={(e) => setApellidoMaterno(e.target.value)}
+            value={dni}
+            onChange={(e) => setDni(e.target.value)}
             required
           />
         </div>

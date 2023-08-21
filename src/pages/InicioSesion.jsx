@@ -1,16 +1,40 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../css/registro.css'
-const InicioSecion = () =>{
+const InicioSecion = ({setUser}) =>{
+
     const [email, setEmail] = useState('');
     const [contrasena, setContrasena] = useState('');
-  
+
+    const navigate = useNavigate();
+
     const handleSubmit = (e) => {
       e.preventDefault();
       let data = {
         email : email,
-        contrasena : contrasena
+        password : contrasena
       }
+      
+      console.log(JSON.stringify(data))
+
+      fetch('http://127.0.0.1:8000/api/login',{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(responseData => {
+        console.log(responseData)
+        setUser(responseData.user)
+        navigate('/');
+
+      })
+      .catch(error => console.error('Error fetching data:', error));
+
     };
+
     return (
         <div className="registro-usuario">
       <h2>Registro de Usuario</h2>

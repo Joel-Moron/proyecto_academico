@@ -1,15 +1,20 @@
 import './App.css';
+import './css/style.css';
 import Asistente from './Asistente';
 import { Routes, Route } from 'react-router-dom';
 import Inicio from './component/Inicio';
 import Nav from './component/Nav'
+import About from './pages/About'
 
 
 import 'primereact/resources/themes/saga-blue/theme.css'; // Elige un tema
 import 'primereact/resources/primereact.min.css';
 import 'primeflex/primeflex.css';
 import React from 'react';
-import Componente from './component/componente';
+import Componente from './component/footer';
+import Services from './pages/Sevices';
+import Registro from './pages/Registro';
+
 
 
 
@@ -19,7 +24,9 @@ function App() {
       <Nav/>
       <Routes>
         <Route path='/' element={<Inicio/>}/>
-        <Route path='componente' element={<Componente/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/services' element={<Services/>}/>
+        <Route path='/registro' element={<Registro/>}/>
       </Routes>
       <Componente/>
       <Asistente/>

@@ -4,22 +4,34 @@ import { InputText } from 'primereact/inputtext';
         
 const Nav = () => {
     return(
-        <div   
-        style={{
-            height:'60px',
-            backgroundColor:'gray',
-            boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)'
-        }}>
-            
-            <div className='flex justify-content-end align-items-center gap-2 p-3 px-8'>
-                <p>Bonitos y Gorditos</p>
-                <InputText className='flex-1 h-2rem border-round-2xl'/>
-                <p>Categorias</p>
-                .<i className="fas fa-accessible-icon">icon</i>
-                <Button className='  border-green-400 bg-green-400  ' label='Iniciar Sesion'/>
-                <Button className=' bg-white-alpha-90 border-white-alpha-90  text-black-alpha-90  font-weight-bold' label='Cerrar Sesion'/>
-            </div>
-        </div>
+        <>
+            <header>
+                <div class="inner">
+                    <h1 class="logo"><a href="index.html">Pet clinic</a></h1>
+                    <div class="fright">
+                    <div class="header-meta">
+                        <form action="#" id="search-form" method="post">
+                        <input type="text" onBlur="if(this.value==''){this.value='search'}" onFocus="if(this.value=='search'){this.value=''}" value="search" name="search"/>
+                        <a class="search-form-submit"></a>
+                        </form>
+                        <div class="col-elem"> Have a problem with your pet?<br/>
+                        Call us now: <span class="phone"> 1-800-123-1234 </span> </div>
+                    </div>
+                    <nav className='flex w-auto'>
+                        <ul class="sf-menu flex">
+                        <li><a href="/">main</a></li>
+                        <li><a href="about">about</a></li>
+                        <li> <a href="services">services</a></li>
+                        <li><a href="productos">productos</a></li>
+                        <li><a href="login">iniciar sesión</a></li>
+                        <li><a href="registro">registrarse</a></li>
+                        </ul>
+                    </nav>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </header>
+        </>
     )
 }
 

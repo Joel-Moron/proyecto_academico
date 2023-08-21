@@ -23,7 +23,7 @@ const Nav = () => {
                         <li><a href="about">about</a></li>
                         <li> <a href="services">services</a></li>
                         <li><a href="productos">productos</a></li>
-                        <li><a href="login">iniciar sesión</a></li>
+                        <li><a href="inicio-sesion">iniciar sesión</a></li>
                         <li><a href="registro">registrarse</a></li>
                         </ul>
                     </nav>

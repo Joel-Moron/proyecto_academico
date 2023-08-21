@@ -14,8 +14,7 @@ import React from 'react';
 import Componente from './component/footer';
 import Services from './pages/Sevices';
 import Registro from './pages/Registro';
-
-
+import InicioSecion from './pages/InicioSesion';
 
 
 function App() {
@@ -27,6 +26,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/registro' element={<Registro/>}/>
+        <Route path='/inicio-sesion' element={<InicioSecion/>}/>
       </Routes>
       <Componente/>
       <Asistente/>

@@ -3,7 +3,7 @@ import './css/style.css';
 import Asistente from './Asistente';
 import { Routes, Route } from 'react-router-dom';
 import Inicio from './component/Inicio';
-import Nav from './component/Nav'
+import Header from './component/Header'
 import About from './pages/About'
 
 
@@ -21,7 +21,7 @@ function App() {
     const [user,setUser] = useState(null)
   return (
     <div className="App">
-      <Nav user={user} setUser={setUser}/>
+      <Header user={user} setUser={setUser}/>
       <div className='w-full'  style={{minHeight:'calc(100% - 350px)'}}>
         <Routes>
           <Route path='/' element={<Inicio/>}/>

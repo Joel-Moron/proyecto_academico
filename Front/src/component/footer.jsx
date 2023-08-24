@@ -1,9 +1,9 @@
 const componente = () =>{
     return(
         <>
-            <footer>
+            <footer className="w-full">
                 <div class="copyright"> &copy; 2023 <strong >Bonitos y Gorditos</strong>
-                    <div>Website Template by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></div>
+                    <div>Derechos reservados por: Bonitos y Gorditos Coprporation</div>
                 </div>
                 <ul class="social-list">
                     <li><a href="#"><img src="../images/social-link-1.jpg" alt=""/></a></li>

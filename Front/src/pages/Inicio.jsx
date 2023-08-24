@@ -1,4 +1,7 @@
-import Carousels from './Carousels';
+
+import About from '../component/About';
+import Carousels from '../component/Carousels';
+
 const Inicio = () => {
   return (
     <div
@@ -7,6 +10,9 @@ const Inicio = () => {
     >
       <section className="w-full">
         <Carousels/>
+      </section>
+      <section>
+        <About/>
       </section>
     </div>
   );

@@ -60,9 +60,6 @@ const Header = ({ user, setUser }) => {
         <nav className="flex w-auto">
           <ul className="sf-menu flex gap-5">
                 <li>
-                  <a onClick={()=>navigate('/about')}>about</a>
-                </li>
-                <li>
                   <a onClick={()=>navigate('/services')}>services</a>
                 </li>
                 <li>

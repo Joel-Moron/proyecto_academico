@@ -40,6 +40,7 @@ const App =()=> {
       state : false
     })
     const userId = localStorage.getItem('user_id');
+    const userName = JSON.parse(localStorage.getItem('name'));
     
     console.log(userId);
 
@@ -57,8 +58,8 @@ const App =()=> {
   return (
     <CartProvider>
       <div className="App">
-        <Header userId={userId} user={user} setUser={setUser}/>
-        <div className='w-full'  style={{minHeight:'calc(100vh - 200px)'}}>
+        <Header userId={userId} user={user} setUser={setUser} userName={userName}/>
+        <div className='w-full'  style={{minHeight:'calc(100vh - 370px)'}}>
           <Routes>
             <Route path='/' element={<Inicio/>}/>
             <Route path='/services' element={<Services/>}/>

@@ -12,7 +12,7 @@ import { CartContext } from '../Context/CartContex';
 
 
 
-const Header = ({ user, setUser, userId }) => {
+const Header = ({ user, setUser, userId, userName }) => {
   const {cart} = useContext(CartContext);
   const navigate = useNavigate();
   const menuLeftBurger = useRef(null);
@@ -51,7 +51,20 @@ const Header = ({ user, setUser, userId }) => {
       command: () => {navigate('/registro')}
     }])
     :
-    ([{
+    ([
+      {
+        template: (options) => {
+          return (
+              <button onClick={() => ''} className={'w-full p-link flex align-items-center px-1 h-auto'}>
+                <img className='mr-2 p-1 border-circle bg-orange-300 h-2rem w-2rem' src={''} alt="" />
+                  <div className="flex flex-column align">
+                      <span className="font-bold">{userName || 'nombres'}</span>
+                  </div>
+              </button>
+          )
+        }
+      },
+      {
         label: 'Citas',
         command: () => {navigate('/citas')}
     },

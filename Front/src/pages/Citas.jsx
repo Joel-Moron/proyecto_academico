@@ -1,8 +1,4 @@
 import { Button } from "primereact/button";
-import CardCitas from "../component/CardCitas";
-
-
-
 
 const Citas = () => {
 

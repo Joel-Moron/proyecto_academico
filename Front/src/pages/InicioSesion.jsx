@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/registro.css";
-const InicioSecion = ({ setUser }) => {
+const InicioSecion = ({ setUser, defaultPath, aviso }) => {
   const [email, setEmail] = useState("");
   const [contrasena, setContrasena] = useState("");
 
@@ -35,7 +35,7 @@ const InicioSecion = ({ setUser }) => {
         localStorage.setItem('name', JSON.stringify(responseData.data.user_name));
         localStorage.setItem('token', JSON.stringify(responseData.data.user_token));
         localStorage.setItem('user_id', JSON.stringify(responseData.data.id));
-        navigate("/");
+        navigate( defaultPath || "/");
         setUser(responseData.data)
       })
       .catch((error) => {
@@ -45,7 +45,8 @@ const InicioSecion = ({ setUser }) => {
   };
 
   return (
-      <div className="Contenedorsection pt-5 ">
+      <div className="Contenedorsection pt-5 flex-column">
+        <p>{aviso?.state !== false? aviso?.label:''}</p>
         <div className="form-box py-3">
           <div className="form-value">
             <form onSubmit={handleSubmit}>
@@ -73,13 +74,13 @@ const InicioSecion = ({ setUser }) => {
               <div className="forget">
                 <label htmlFor="">
                   <input type="checkbox" />
-                  Remember Me <a href="#">Forget Password</a>
+                  Remember Me <Link to='#'>Forget Password</Link>
                 </label>
               </div>
               <button type="submit">Iniciar Sesión</button>
               <div className="register">
                 <p>
-                  No posee una cuenta? <a onClick={()=>navigate('/registro')}>Registrarse</a>
+                  No posee una cuenta? <Link to='/registro'>Registrarse</Link>
                 </p>
               </div>
             </form>

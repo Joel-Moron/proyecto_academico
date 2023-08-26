@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'primereact/button';
 import { Carousel } from 'primereact/carousel';
-import { Tag } from 'primereact/tag';
 import { ProductService } from '../services/ProductService';
 
 export default function CircularDemo() {
     const [products, setProducts] = useState([]);
-    const responsiveOptions = [
+/*     const responsiveOptions = [
         {
             breakpoint: '1199px',
             numVisible: 1,
@@ -22,7 +20,7 @@ export default function CircularDemo() {
             numVisible: 1,
             numScroll: 1
         }
-    ];
+    ]; 
 
     const getSeverity = (product) => {
         switch (product.inventoryStatus) {
@@ -38,7 +36,7 @@ export default function CircularDemo() {
             default:
                 return null;
         }
-    };
+    };*/
 
     useEffect(() => {
         ProductService.getProductsSmall().then((data) => setProducts(data.slice(0, 9)));
@@ -50,15 +48,6 @@ export default function CircularDemo() {
                 <div className="mb-3">
                     <img src={product.image} alt={product.name} className="w-6 shadow-2" style={{maxHeight:'400px'}} />
                 </div>
-                {/*<div>
-                    <h4 className="mb-1">{product.name}</h4>
-                    <h6 className="mt-0 mb-3">${product.price}</h6>
-                     <Tag value={product.inventoryStatus} severity={getSeverity(product)}></Tag>
-                    <div className="mt-5 flex flex-wrap gap-2 justify-content-center">
-                        <Button icon="pi pi-search" className="p-button p-button-rounded" />
-                        <Button icon="pi pi-star-fill" className="p-button-success p-button-rounded" />
-                    </div> 
-                </div>*/}
             </>
         );
     };

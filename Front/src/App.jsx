@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 //ESTILOS
@@ -35,8 +35,25 @@ import { CartProvider } from './Context/CartContex';
 
 const App =()=> {
     const [user,setUser] = useState(null)
+    const [avisoCitas, setAvisoCitas] = useState({
+      label : 'para ver su historial de citas debe iniciar sesion',
+      state : false
+    })
     const userId = localStorage.getItem('user_id');
+    
     console.log(userId);
+
+    useEffect(() => {
+      // Obtener la ruta actual
+      const currentPath = window.location.pathname;
+  
+      // Verificar si la ruta es '/citas' y cambiar el estado
+      if (currentPath === '/citas') {
+        setAvisoCitas(prevState => ({ ...prevState, state: true }));
+      }
+    }, []);
+
+
   return (
     <CartProvider>
       <div className="App">
@@ -55,6 +72,7 @@ const App =()=> {
               :
               (
                 <>
+                  <Route path='/citas' element={<InicioSecion setUser={setUser} defaultPath='/citas' aviso={avisoCitas} />}/>
                   <Route path='/inicio-sesion' element={<InicioSecion setUser={setUser}/>}/>
                   <Route path='/registro' element={<Registro/>}/>
                 </>

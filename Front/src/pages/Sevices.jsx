@@ -1,42 +1,8 @@
-import React, { useState } from 'react'
-import Img1 from '../images/page3-img1.png'
-import Img2 from '../images/page3-img2.png'
-import Img3 from '../images/page3-img3.png'
-import Img4 from '../images/page3-img4.png'
-import Img5 from '../images/page3-img5.png'
-import Img6 from '../images/page3-img6.png'
+import React from 'react'
 import "../css/CardServicio.css"
-import { useNavigate } from "react-router-dom";
 
 
 const Services = () => {
-  const navigate = useNavigate();
-
-
-  const items = [
-    {
-      label: 'Sobre nosotros',
-      command: () => { navigate('/about') }
-    },
-    {
-      label: 'Servicios',
-      command: () => { navigate('/services') }
-    },
-    {
-      label: 'Productos',
-      command: () => { navigate('/productos') }
-    },
-    {
-      label: 'Iniciar sesión',
-      command: () => { navigate('/inicio-sesion') }
-    },
-    {
-      label: 'Registro',
-      command: () => { navigate('/registro') }
-    }
-  ];
-
-
 
   return (
     // <div className='Todoooooooooooooo flex w-full'>

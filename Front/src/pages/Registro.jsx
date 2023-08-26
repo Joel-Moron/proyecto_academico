@@ -18,28 +18,38 @@ const Registro = () => {
       password: contrasena,
       app: apellidoPaterno,
       apm: apellidoMaterno,
+      dni: dni,
     };
 
     console.log(JSON.stringify(data));
 
-    fetch("http://127.0.0.1:8000/api/login", {
+    fetch("http://127.0.0.1:8000/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error en la solicitud");
+        }
+        return response.json();
+      })
       .then((responseData) => {
         console.log(responseData);
+        // Realizar acciones según el tipo de respuesta (éxito)
         navigate("/inicio-sesion");
       })
-      .catch((error) => console.error("Error fetching data:", error));
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        // Realizar acciones en caso de error (mostrar mensaje de error, etc.)
+      });
   };
 
   return (
-    <div className="Contenedorsection">
-      <div className="form-box">
+    <div className="Contenedorsection pt-5 ">
+      <div className="form-box py-3">
         <div className="form-value">
           <form onSubmit={handleSubmit}>
             <h2 className="loginh2">Registro de Usuario</h2>

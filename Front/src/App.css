@@ -55,5 +55,10 @@ body, .App, #root {
 
 
 
-/*INICIO*/
+/*Whatsaap*/
+
+.whatsapp-btn{
+  bottom: 30px !important;
+  right: 100px !important;
+}
 

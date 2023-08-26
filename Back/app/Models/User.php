@@ -10,11 +10,13 @@ class User extends Model
     protected $table = 'user';
     protected $fillable = [
         'user_name',
-        'user_email',
-        'user_password',
         'user_app',
         'user_apm',
-        'token',
-        'date_token'
+        'user_dni',
+        'user_email',
+        'user_emailV',
+        'user_password',
+        'user_token',
+        'date_token',
     ];
 }

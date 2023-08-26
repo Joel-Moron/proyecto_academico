@@ -12,11 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cita', function (Blueprint $table) {
-            $table->id('cita_id');
+            $table->id('id');
             $table->string('cita_fecha');
             $table->string('cita_hora');
+            $table->string('cita_motivo');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('user_id')->on('user');
+            $table->foreign('user_id')->references('id')->on('user');
         });
     }
 

@@ -23,57 +23,69 @@ const InicioSecion = ({ setUser }) => {
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error en la solicitud");
+        }
+        return response.json();
+      })
       .then((responseData) => {
         console.log(responseData);
-        setUser(responseData.user);
+        // Realizar acciones según el tipo de respuesta (éxito)
+        localStorage.setItem('name', JSON.stringify(responseData.data.user_name));
+        localStorage.setItem('token', JSON.stringify(responseData.data.user_token));
+        localStorage.setItem('user_id', JSON.stringify(responseData.data.id));
         navigate("/");
+        setUser(responseData.data)
       })
-      .catch((error) => console.error("Error fetching data:", error));
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        // Realizar acciones en caso de error (mostrar mensaje de error, etc.)
+      });
   };
 
   return (
-    <div className="Contenedorsection">
-      <div className="form-box">
-        <div className="form-value">
-          <form action="">
-            <h2 className="loginh2">Iniciar Sesión</h2>
-            <div className="inputbox">
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <label htmlFor="email">Correo Electronico</label>
-            </div>
-            <div className="inputbox">
-              <input
-                type="password"
-                id="contrasena"
-                value={contrasena}
-                onChange={(e) => setContrasena(e.target.value)}
-                required
-              />
-              <label htmlFor="contrasena">Contraseña</label>
-            </div>
-            <div className="forget">
-              <label htmlFor="">
-                <input type="checkbox" />
-                Remember Me <a href="#">Forget Password</a>
-              </label>
-            </div>
-            <button type="submit">Iniciar Sesión</button>
-            <div className="register">
-              <p>
-                No posee una cuenta? <a onClick={()=>navigate('/registro')}>Registrarse</a>
-              </p>
-            </div>
-          </form>
+      <div className="Contenedorsection pt-5 ">
+        <div className="form-box py-3">
+          <div className="form-value">
+            <form onSubmit={handleSubmit}>
+              <h2 className="loginh2">Iniciar Sesión</h2>
+              <div className="inputbox">
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <label htmlFor="email">Correo Electronico</label>
+              </div>
+              <div className="inputbox">
+                <input
+                  type="password"
+                  id="contrasena"
+                  value={contrasena}
+                  onChange={(e) => setContrasena(e.target.value)}
+                  required
+                />
+                <label htmlFor="contrasena">Contraseña</label>
+              </div>
+              <div className="forget">
+                <label htmlFor="">
+                  <input type="checkbox" />
+                  Remember Me <a href="#">Forget Password</a>
+                </label>
+              </div>
+              <button type="submit">Iniciar Sesión</button>
+              <div className="register">
+                <p>
+                  No posee una cuenta? <a onClick={()=>navigate('/registro')}>Registrarse</a>
+                </p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 

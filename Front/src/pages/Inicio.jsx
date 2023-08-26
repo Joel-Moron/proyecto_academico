@@ -8,10 +8,10 @@ const Inicio = () => {
       className="flex flex-wrap gap-5 justify-content-center"
       style={{ minHeight: "calc(100% - 16px)" }}
     >
-      <section className="w-full">
+      <section className="w-11">
         <Carousels/>
       </section>
-      <section>
+      <section className='w-full'>
         <About/>
       </section>
     </div>

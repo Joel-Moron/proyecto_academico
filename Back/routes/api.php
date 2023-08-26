@@ -18,6 +18,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CitaController;
 
 Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
 Route::post('/apartar-cita/{id}', [CitaController::class, 'apartarCita']);
 

@@ -1,117 +1,64 @@
 const About = () => {
     return(
-        <section id="content">
-  <div class="container_24">
-    <div class="indent-bot-2 boxes-bg">
-      <article class="grid_6">
-        <div class="box-1">
-          <div class="inner">
-            <h3>Microchip implant</h3>
-            <p> Vivamus hendrerit mauris ut dui. gravida ut viverra lectus tincidunt. Cras mattis tempor eros nec tristique. </p>
-            <div class="btn-container">
-              <div class="button-box"> <a href="#" class="button">read more</a> </div>
+        <div className="flex flex-column w-full">
+          <div className="flex gap-5 w-full justify-content-around">
+            <div className="">
+              <img src="img/about-us.jpg" alt="Nuestra Clínica"/>
+            </div>
+            <div className="">
+              <h2>Sobre Nosotros</h2>
+              <p>
+                En Veterinaria PetCare, nos apasiona brindar el mejor cuidado para tus mascotas...
+              </p>
             </div>
           </div>
+
+
+          <div className="services-section">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+              <li>Consultas de Rutina</li>
+              <li>Cirugías</li>
+              <li>Tratamientos Médicos</li>
+              <li>Odontología Veterinaria</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-column">
+            <h2 >Nuestro Equipo</h2>
+            <div className="flex justify-content-around">
+              <div className="team-member">
+                <img src="img/vet1.jpg" alt="Veterinario"/>
+                <h3>Dr. Juan Pérez</h3>
+                <p>Veterinario Principal</p>
+              </div>
+              <div className="team-member">
+                <img src="img/vet2.jpg" alt="Veterinario"/>
+                <h3>Dra. María Rodríguez</h3>
+                <p>Veterinaria Asociada</p>
+              </div>
+              <div className="team-member">
+                <img src="img/vet2.jpg" alt="Veterinario"/>
+                <h3>Dr. José Rodríguez</h3>
+                <p>Veterinario Suplente</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-content-around">
+            <div className="text-left">
+              <h2>Contacto</h2>
+              <p>Ponte en contacto con nosotros para programar una cita o hacer preguntas.</p>
+              <p>Teléfono: (123) 456-7890</p>
+              <p>Email: info@veterinariapetcare.com</p>
+            </div>
+            <div>
+              <h2>Ubicacion</h2>
+              <img src="" alt="Mapa Ubicación" />
+            </div>
+          </div>
+
         </div>
-      </article>
-      <article class="grid_6">
-        <div class="box-1">
-          <div class="inner">
-            <h3>Ultrasound</h3>
-            <p class="p0"> <strong class="str-1"> Vivamus hendrerit mauris ut dui gravida ut viverra </strong> </p>
-            <p> Cras mattis tempor eros nec tristique. Sed sed felis arcu, vel vehicula augue. Maecenas faucibus sagittis. cursus. </p>
-            <div class="btn-container">
-              <div class="button-box"> <a href="#" class="button">read more</a> </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article class="grid_6">
-        <div class="box-1">
-          <div class="inner">
-            <h3>Transport service</h3>
-            <p> Vivamus hendrerit mauris ut dui. gravida ut viverra lectus tincidunt. Cras mattis tempor eros nec tristique. </p>
-            <div class="btn-container">
-              <div class="button-box"> <a href="#" class="button">read more</a> </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article class="grid_6">
-        <div class="box-1">
-          <div class="inner">
-            <h3>Vaccinations</h3>
-            <p class="p0"> <strong class="str-1"> Vivamus hendrerit mauris ut gravida ut viverra </strong> </p>
-            <p> Cras mattis tempor eros nec tristique. Sed sed felis arcu, vel vehicula augue. </p>
-            <div class="btn-container">
-              <div class="button-box"> <a href="#" class="button">read more</a> </div>
-            </div>
-          </div>
-        </div>
-      </article>
-      <div class="clear"></div>
-      <div class="wrapper indent-bot-1">
-        <article class="grid_7 suffix_1">
-          <h2>About our clinic:</h2>
-          <p class="p1"> <strong class="str-3"> Vivamus hendrerit mauris ut dui gravida ut viverra lectus tincidunt. Cras mattis tempor eros nec tristique. </strong> </p>
-          <p> Sed sed felis arcu, vel vehicula augue. Maecenas faucibus sagittis cursus. Fusce tincidunt, tellus eget tristique cursus, orci mi iaculis sem, sit amet dictum velit velit eu magna. Nunc viverra nisi sed orci tincidunt at hendrerit orci luctus. Andisse tincidunt, ipsum at semper facilisis. </p>
-          <div class="alignright"> <a href="#" class="link">read more</a> </div>
-        </article>
-        <article class="grid_16">
-          <h2>Meet our team:</h2>
-          <div class="wrapper">
-            <div class="grid_4 alpha"> <img src="images/page2-img1.png" alt="" class="img-indent-bot"/>
-              <div class="author"> <em> Thom Green </em> (surgeon) </div>
-            </div>
-            <div class="grid_4"> <img src="images/page2-img2.png" alt="" class="img-indent-bot"/>
-              <div class="author"> <em> Linda Nelson </em> (nurse) </div>
-            </div>
-            <div class="grid_4"> <img src="images/page2-img3.png" alt="" class="img-indent-bot"/>
-              <div class="author"> <em> Sara Black </em> (diagnostician) </div>
-            </div>
-            <div class="grid_4 omega"> <img src="images/page2-img4.png" alt="" class="img-indent-bot"/>
-              <div class="author"> <em> John Smith </em> (immunologist) </div>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="hr-border"></div>
-      <div class="a1">
-        <h2>Testimonials:</h2>
-        <div>
-          <div class="grid_6 alpha">
-            <blockquote class="quote-1">
-              <div class="quote-1-inner"> <span class="str-1">Sed sed felis arcu, vel vehicula augue. Maecenas faucibus sagittis cursus. Fusce tincidunt, tellus eget tristique cursus orci mi iaculis sem sit.</span> </div>
-            </blockquote>
-            <div class="author alignright indents-1"> <em> Richard Cox </em> (manager) </div>
-          </div>
-          <div class="grid_6">
-            <blockquote class="quote-1">
-              <div class="quote-1-inner"> <strong>Sed sed felis arcu, vel vehicula augue.</strong><br/>
-                Maecenas faucibus sagittis cursus. Fusce tincidunt, tellus eget tristique cursus orci mi iaculis sem sit amet dictum velit velit eu. </div>
-            </blockquote>
-            <div class="author alignright indents-1"> <em> April Jeckson </em> (housewife) </div>
-          </div>
-          <div class="grid_6">
-            <blockquote class="quote-1">
-              <div class="quote-1-inner"> <strong>Maecenas faucibus sagittis cursus.</strong><br/>
-                Fusce tincidunt, tellus eget tristique cursus orci mi iaculis sem sit. amet.dictum velit velit eu magna. Nunc viverra nisi sed orci tin. </div>
-            </blockquote>
-            <div class="author alignright indents-1"> <em> Alan Pool </em> (lawyer) </div>
-          </div>
-          <div class="grid_6 omega">
-            <blockquote class="quote-1">
-              <div class="quote-1-inner"> <strong>Fusce tincidunt, tellus eget tristique cursus orci mi</strong><br/>
-                iaculis sem sit. amet.dictum velit velit eu magna. Nunc viverra nisi sed orci tincidunt at hendrerit orci luctus. Andisse tincidunt, ipsu. </div>
-            </blockquote>
-            <div class="author alignright indents-1"> <em> Serg Brin </em> (manager) </div>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
     )
 }
 

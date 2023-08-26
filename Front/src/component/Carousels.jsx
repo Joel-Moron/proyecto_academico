@@ -48,7 +48,7 @@ export default function CircularDemo() {
         return (
             <>
                 <div className="mb-3">
-                    <img src={product.image} alt={product.name} className="w-6 shadow-2" />
+                    <img src={product.image} alt={product.name} className="w-6 shadow-2" style={{maxHeight:'400px'}} />
                 </div>
                 {/*<div>
                     <h4 className="mb-1">{product.name}</h4>

@@ -47,10 +47,10 @@ const CarritoCompras = () => {
                                         <p className="text-base" style={{color:'#666'}}>precio Unitario: S/ {product.precio} </p>
                                         <p className="text-base" style={{color:'#666'}}>precio Total: S/ {(product.precio*product.cantidad).toFixed(2)} </p>
                                     </div>
-                                <div className="flex align-items-center gap-3">
-                                        <Button disabled = {product.cantidad === 0} onClick={() => QuitarProducto(product)}  className="bg-blue-500">Quitar</Button>
-                                        <Button disabled = {product.stock === product.cantidad} onClick={() => AgregarProducto(product)} className="bg-blue-500">Agregar</Button>
-                                        <Button onClick={() => EliminarProducto(product)} className="bg-blue-500">Eliminar</Button>
+                                <div className="flex flex-wrap align-items-center w-2 gap-3">
+                                        <Button disabled = {product.cantidad === 0} onClick={() => QuitarProducto(product)}  className="bg-blue-500 text-center" label="Quitar"/>
+                                        <Button disabled = {product.stock === product.cantidad} onClick={() => AgregarProducto(product)} className="bg-blue-500 text-center" label="Agregar"/>
+                                        <Button onClick={() => EliminarProducto(product)} className="bg-blue-500 text-center" label="Eliminar"/>
                                     </div>
                                 </div>
                             );
@@ -62,9 +62,9 @@ const CarritoCompras = () => {
                         <div className="flex flex-1 text-left gap-1">
                             <p className="text-base" style={{color:'#666'}}>Precio total de los productos: S/ {total.toFixed(2)} </p>
                         </div>
-                        <div className="flex align-items-center gap-3">
-                            <Button className="bg-blue-500">Comprar</Button>
-                            <Button onClick={() => clearCart()} className="bg-blue-500">Vaciar Carrito</Button>
+                        <div className="flex flex-wrap align-items-center w-2 gap-3">
+                            <Button className="bg-blue-500 text-center" label="Comprar"/>
+                            <Button onClick={() => clearCart()} className="bg-blue-500 text-center" label="Vaciar Carrito"/>
                         </div>
                     </div>
 

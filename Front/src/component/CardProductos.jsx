@@ -16,7 +16,7 @@ const CardProductos = ({data}) =>{
 
     return(
         <div style={{background:'#E99E05', boxShadow:'2px 2px rgba(0, 0, 0, 0.4)'}} className='flex flex-column  max-w-20rem h-20rem p-4 align-items-center border-round-xl col-4 gap-1'>
-            <img src={data.img} alt="" className='w-12rem h-9rem border-round-lg'/>
+            <img src={data.img} alt="" className='max-w-12rem max-h-9rem border-round-lg' style={{height:'70%',width:'100%'}}/>
             <p style={{fontWeight:'bold',fontSize:'18px',marginTop:''}} className='text-black-alpha-90'>{data.nombre}</p>
             <p style={{fontWeight:'bold', }} className='text-black-alpha-90'>Categoria: {data.categoria}</p>
             <div className='flex gap-5 justify-content-center'>

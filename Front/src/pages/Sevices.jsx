@@ -7,8 +7,8 @@ const Services = () => {
   return (
     // <div className='Todoooooooooooooo flex w-full'>
       <div className='flex flex-wrap gap-3 p-4 w-full' style={{ justifyContent: "center", marginTop: "1rem" }}>
-        <div className='flex flex-column' style={{ height: '50px', backgroundColor: 'ff9200' }}>
-          <span style={{ fontSize: '50px', color:'#E99E05' }}>Nuestros Servicios</span><br />
+        <div className='flex flex-column' style={{ backgroundColor: 'ff9200' }}>
+          <h2 style={{ fontSize: '50px', color:'#E99E05' }}>Nuestros Servicios</h2><br />
           <span style={{ fontSize: '20px', color: 'gray', fontFamily: 'italic' }}>Lo que ofrecemos:</span>
         </div>
         <div className='flex flex-wrap gap-3' style={{ justifyContent: "center" }}>

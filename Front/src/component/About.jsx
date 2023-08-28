@@ -1,51 +1,42 @@
 const About = () => {
   return (
     <div className="flex flex-column w-full gap-5">
-      <div style={{ height: '50rem', backgroundImage: 'radial-gradient(circle at 104.17% 95.45%, #efe37b 0, #f4d86e 12.5%, #f9cb60 25%, #fcbd54 37.5%, #ffad49 50%, #ff9c41 62.5%, #ff8b3e 75%, #ff7a40 87.5%, #ff6945 100%)' }} className="gap-5 w-full justify-content-around  flex-column">
+      <div style={{ height: 'auto', backgroundImage: 'radial-gradient(circle at 104.17% 95.45%, #efe37b 0, #f4d86e 12.5%, #f9cb60 25%, #fcbd54 37.5%, #ffad49 50%, #ff9c41 62.5%, #ff8b3e 75%, #ff7a40 87.5%, #ff6945 100%)' }} className="flex p-4 gap-5 w-full justify-content-around  flex-column">
         <h2 style={{ fontSize: '6vmin', fontWeight: 'bold', height: '4rem', marginTop: '20px', color: 'white', marginBottom: '20px' }}>Sobre Nosotros</h2>
+        <div className="flex w-full">
 
-
-
-
-        {/* Contenedor Misión */}
-        <div style={{ height: '25vmin' }} className="flex  justify-content-evenly align-items-center">
-          <div style={{ height: '100%', boxShadow:'2px 2px 2px 2px rgba(0, 0, 0, 0.4)', borderRadius:'15px 15px 15px 15px'}} className="card w-4">
-            <h3 style={{ fontWeight: 'bold', fontSize: '2.5rem', height: '5rem', paddingTop: '1rem' }}>Misión</h3>
-            <p style={{ height: '9rem', justifyContent: 'center', color:'brown', display: 'flex', alignItems: 'center', fontSize: '1.4rem', fontWeight: 'bold' }}>
-              Crear conciencia y contribuir en el bienestar de las mascotas,
-              mediante la prestación de servicios veterinarios de calidad a nuestros pacientes y capacitando a sus propietarios,
-              compartiendo valores, principios éticos, responsabilidad y compromiso; asi mismo promover las buenas practicas de la educacion y buen trato hacia todos los seres vivos, en especial hacia los pequeños peludos del hogar.
-            </p>
+          {/* Contenedor Misión */}
+          <div className="flex flex-wrap justify-content-around">
+            <div className="text-center w-4" style={{minWidth:'450px', boxShadow:'2px 2px 2px 2px rgba(0, 0, 0, 0.4)', borderRadius:'15px 15px 15px 15px'}}>
+              <h3 style={{ fontWeight: 'bold', fontSize: '2.5rem', height: '5rem', paddingTop: '1rem' }}>Misión</h3>
+              <p style={{ justifyContent: 'center', color:'brown', display: 'flex', alignItems: 'center', fontSize: '1.4rem', fontWeight: 'bold', margin: '0 auto' }}>
+                Crear conciencia y contribuir en el bienestar de las mascotas,
+                mediante la prestación de servicios veterinarios de calidad a nuestros pacientes y capacitando a sus propietarios,
+                compartiendo valores, principios éticos, responsabilidad y compromiso; asi mismo promover las buenas practicas de la educacion y buen trato hacia todos los seres vivos, en especial hacia los pequeños peludos del hogar.
+              </p>
+            </div>
+            <img className="w-4 max-h-22rem" src="https://universidadeuropea.com/resources/media/images/salidas-veterinaria-1200x630_oti17Ra.original.jpg" alt="" style={{borderRadius:' 120px  120px  50px' }}/>
           </div>
           <div>
-            <img src="https://universidadeuropea.com/resources/media/images/salidas-veterinaria-1200x630_oti17Ra.original.jpg" alt="imagencita" style={{width: "35rem", height: '20rem',marginLeft:'150px', margin: '20px',marginTop:'100px',borderRadius:' 120px  120px  50px' }} />
+
           </div>
         </div>
+        
 
-
-
-
-        {/* Contenedor Visión */}
-        <div className="flex  justify-content-evenly align-items-center">
-          <div>
-            <img style={{ width: "35rem", height: '20rem', marginTop: '100px',borderRadius:' 120px 120px 50px 150px' }} src="https://st3.depositphotos.com/13194036/32088/i/450/depositphotos_320886642-stock-photo-selective-focus-of-veterinarian-assisting.jpg" alt="imagencita" />
-          </div>
-          {/* <div style={{backgroundColor:'white',height:'25px',width:'25px'}}>
-            <span style={{color:'white',zIndex:'-1'}}>0</span>
-          </div> */}
-          <div style={{height:'18.5rem',width:'28rem',marginLeft:'120PX', marginTop: '80px',boxShadow:'2px 2px 2px 2px rgba(0, 0, 0, 0.4)', borderRadius:'15px 15px 15px 15px' }} className='card w-4'>
-            <h3 style={{ fontWeight: 'bold', fontSize: '2.5rem', height: '5rem', paddingTop: '1rem', marginBottom: '25px', }} >Visión</h3>
-            <p className="card" style={{ height: '9rem', justifyContent: 'center', display: 'flex', alignItems: 'center', fontSize: '1.4rem', fontWeight: 'bold', color:'brown' }}>
-              La clínica veterinaria BONITOS Y GORDITOS tiene como visión ser una empresa sólida,
-              líder en prestación de servicios médicos veterinarios y artículos de la mejor calidad y profesionalismo,
-              buscando la detección, prevención y curación de enfermedades en los animales, generando un ambiente con
-              equilibrio sanitario y emocional para las mascotas y sus propietarios de forma sostenible, profesional y ética.
-              
-            </p>
+        <div className="flex w-full">
+          <div className="flex flex-wrap justify-content-around">
+            <img className="w-4 max-h-22rem" src="https://st3.depositphotos.com/13194036/32088/i/450/depositphotos_320886642-stock-photo-selective-focus-of-veterinarian-assisting.jpg" alt="" style={{borderRadius:' 120px  120px  50px' }}/>
+            <div className="flex flex-column text-center w-4" style={{minWidth:'450px', boxShadow:'2px 2px 2px 2px rgba(0, 0, 0, 0.4)', borderRadius:'15px 15px 15px 15px'}}>
+              <h3 style={{ fontWeight: 'bold', fontSize: '2.5rem', height: '5rem', paddingTop: '1rem' }}>Misión</h3>
+              <p className="flex-1 " style={{  color:'brown', fontSize: '1.4rem', fontWeight: 'bold', margin: '0 auto' }}>
+                La clínica veterinaria BONITOS Y GORDITOS tiene como visión ser una empresa sólida,
+                líder en prestación de servicios médicos veterinarios y artículos de la mejor calidad y profesionalismo,
+                buscando la detección, prevención y curación de enfermedades en los animales, generando un ambiente con
+                equilibrio sanitario y emocional para las mascotas y sus propietarios de forma sostenible, profesional y ética.
+              </p>
+            </div>
           </div>
         </div>
-
-
       </div>
 
 
@@ -66,9 +57,9 @@ const About = () => {
         </div>
       </div>
 
-      <div style={{ height: '36rem' }} className="flex flex-column">
+      <div style={{ height: 'auto' }} className="flex flex-column">
         <h2 style={{ fontSize: '6vmin', fontWeight: 'bold', height: '5rem', margin: '50px', color: '#E99E05' }} >Nuestro Equipo</h2>
-        <div style={{height:'45rem'}} className="flex justify-content-around">
+        <div style={{height:'auto'}} className="flex justify-content-around flex-wrap gap-5">
           <div style={{boxShadow:'2px 2px 2px 2px rgba(0, 0, 0, 0.4)',borderRadius:'5px 5px 5px 5px'}} className="card team-member">
             <img style={{height:'20rem', width:'20rem'}} className="" src="https://clinicaveterinariasangabriel.pe/wp-content/uploads/2016/06/DSC_07971-1024x925-1.jpg" alt="Veterinario" />
             <h3 style={{fontWeight:'bold',marginTop:'10px',}}> Dr. Juan Pérez</h3>

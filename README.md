@@ -1,7 +1,7 @@
 # Pagina web con chatbot
 #Tecnologias utilizadas en el proyecto
 
-* React <img src="[URL de la Imagen](https://i.ibb.co/VVkSwkG/react.png)" alt="Texto Alternativo" width="64"/>
+* React <img src="https://i.ibb.co/VVkSwkG/react.png" alt="Texto Alternativo" width="64"/>
 * Laravel
 * Zaroc
 * Dialogflow

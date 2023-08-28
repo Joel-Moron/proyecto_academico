@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CitaController;
-
+use App\Http\Controllers\ProductoController;
+Route::get('/productos', [ProductoController::class, 'index']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/apartar-cita/{id}', [CitaController::class, 'apartarCita']);

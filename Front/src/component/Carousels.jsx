@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Carousel } from 'primereact/carousel';
 import { ProductService } from '../services/ProductService';
 
-export default function CircularDemo() {
+    export default function CircularDemo() {
     const [products, setProducts] = useState([]);
 /*     const responsiveOptions = [
         {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/registro.css";
-const InicioSecion = ({ setUser, defaultPath, aviso }) => {
+const InicioSecion = ({ setUser, defaultPath, aviso, setUserId, setUserName }) => {
   const [email, setEmail] = useState("");
   const [contrasena, setContrasena] = useState("");
 
@@ -35,6 +35,8 @@ const InicioSecion = ({ setUser, defaultPath, aviso }) => {
         localStorage.setItem('name', JSON.stringify(responseData.data.user_name));
         localStorage.setItem('token', JSON.stringify(responseData.data.user_token));
         localStorage.setItem('user_id', JSON.stringify(responseData.data.id));
+        setUserId(responseData.data.id)
+        setUserName(responseData.data.user_name)
         navigate( defaultPath || "/");
         setUser(responseData.data)
       })

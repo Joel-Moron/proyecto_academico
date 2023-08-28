@@ -12,7 +12,7 @@ import { CartContext } from '../Context/CartContex';
 
 
 
-const Header = ({ user, setUser, userId, userName }) => {
+const Header = ({ user, setUser, userId, userName,setUserId ,setUserName }) => {
   const {cart} = useContext(CartContext);
   const navigate = useNavigate();
   const menuLeftBurger = useRef(null);
@@ -116,6 +116,8 @@ const Header = ({ user, setUser, userId, userName }) => {
   //FUNCION PARA CERRAR SESION DEL USUARIO
 
   const cerrarSesion = () => {
+    setUserId(null);
+    setUserId(null);
     setUser(null);
     localStorage.removeItem('name');
     localStorage.removeItem('token');

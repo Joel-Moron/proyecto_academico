@@ -14,6 +14,7 @@ import Asistente from './component/Asistente';
 import Componente from './component/footer';
 import Header from './component/Header';
 import WhatsApp from './component/WhatsApp';
+import AsistenteDialogflow from './component/AsistenteDialogflow';
 
 
 //PAGINAS
@@ -39,8 +40,10 @@ const App =()=> {
       label : 'para ver su historial de citas debe iniciar sesion',
       state : false
     })
-    const userId = localStorage.getItem('user_id');
-    const userName = JSON.parse(localStorage.getItem('name'));
+    const [userId, setUserId] =useState(localStorage.getItem('user_id') || null) ;
+    const [userName, setUserName] =useState(JSON.parse(localStorage.getItem('name')) || null) ;
+
+
     
     console.log(userId);
 
@@ -58,7 +61,7 @@ const App =()=> {
   return (
     <CartProvider>
       <div className="App">
-        <Header userId={userId} user={user} setUser={setUser} userName={userName}/>
+        <Header userId={userId} user={user} setUser={setUser} userName={userName} setUserName={setUserName} setUserId={setUserId} />
         <div className='w-full'  style={{minHeight:'calc(100vh - 370px)'}}>
           <Routes>
             <Route path='/' element={<Inicio/>}/>
@@ -74,7 +77,7 @@ const App =()=> {
               (
                 <>
                   <Route path='/citas' element={<InicioSecion setUser={setUser} defaultPath='/citas' aviso={avisoCitas} />}/>
-                  <Route path='/inicio-sesion' element={<InicioSecion setUser={setUser}/>}/>
+                  <Route path='/inicio-sesion' element={<InicioSecion setUser={setUser} setUserId={setUserId} setUserName={setUserName} />}/>
                   <Route path='/registro' element={<Registro/>}/>
                 </>
               )
@@ -85,6 +88,7 @@ const App =()=> {
         </div>
         <Componente/>
       </div>
+      {/* <AsistenteDialogflow/> */}
       <WhatsApp/>
       <Asistente/>
     </CartProvider>

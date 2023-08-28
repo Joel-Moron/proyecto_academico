@@ -9,6 +9,9 @@
     text-shadow: none;
     border: black;
 }
+.ciruserv:hover{
+    background-color: #ffc247;
+}
 
 .SubtituloCardServicio {
     font-family: Montserrat;
@@ -32,5 +35,5 @@
     box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
     max-width: 55vmin;
     margin: 0.5%;
-    background-color: #E99E05;
+    background-color: white;
 }
